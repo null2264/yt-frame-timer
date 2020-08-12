@@ -18,14 +18,8 @@
  --text-color:var(--dark-text);
  --bg-color:var(--dark-bg);
 }
-/* Switched mode */
-.colorPreferance:checked ~ #page {
-  --text-color: var(--dark-text);
-  --bg-color: var(--dark-bg);
-  --theme-color: var(--light-theme);
-}
 
-#page {
+.stackedit {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
