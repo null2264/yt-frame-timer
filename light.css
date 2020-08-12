@@ -20,3 +20,8 @@
   --bg-color: var(--dark-bg);
   --theme-color: var(--light-theme);
 }
+
+#page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
