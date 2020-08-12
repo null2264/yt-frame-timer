@@ -15,7 +15,7 @@
 }
 
 /* Switched mode */
-.colorPreferance:checked ~ .stackedit {
+.colorPreferance:checked ~ #page {
   --text-color: var(--dark-text);
   --bg-color: var(--dark-bg);
   --theme-color: var(--light-theme);
