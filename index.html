@@ -7,10 +7,25 @@
   <meta name="version" content="1.1.1" />
   <title>YouTube Frame Timer</title>
   <link rel="stylesheet" href="https://stackedit.io/style.css" />
-  <script src="main.js"></script>
+  <div id="colorScheme">
+    <link rel="stylesheet" href="light.css" />
+  </div>
+  <style type="text/css">
+    html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: ease-in-out 200ms;
+    transition-delay: 0;
+}
+  </style>
+  <script defer src="main.js"></script>
 </head>
 
 <body class="stackedit">
+  <!-- <button id="darkModeToggle", onclick="toggleColorScheme()"></button> -->
+  <input type="checkbox" id="colorPreferance">
+  <p id="colorPreferanceText" style="display: inline;"></p>
   <div class="stackedit__html">
     <h1 id="youtube-interval-timer">YouTube Interval Timer</h1>
     <h3 id="about">About</h3>
