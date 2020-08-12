@@ -24,7 +24,7 @@
 
 <body class="stackedit">
   <!-- <button id="darkModeToggle", onclick="toggleColorScheme()"></button> -->
-  <input type="checkbox" class="colorPreferance">
+  <input type="checkbox" class="theme-switch">
   <p id="colorPreferanceText" style="display: inline;"></p>
   <div class="stackedit__html" id="page">
     <h1 id="youtube-interval-timer">YouTube Interval Timer</h1>
@@ -61,6 +61,22 @@
     </p>
     <button id="modMessageButton" onclick="copyModMessage()" disabled>Copy Mod Message to Clipboard</button>
   </div>
+      <script>
+      const themeSwitch = document.querySelector('.theme-switch');
+
+      if (localStorage.getItem('theme')) {
+        themeSwitch.checked = localStorage.getItem('theme') === 'dark';
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+      } else if (matchMedia('(prefers-color-scheme: dark)').matches){
+        themeSwitch.checked = true;
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+      
+      themeSwitch.addEventListener('change', function(e) {
+        localStorage.setItem('theme', e.currentTarget.checked ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+      });
+    </script>
 </body>
 
 </html>
