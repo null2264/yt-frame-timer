@@ -14,6 +14,10 @@
   --theme-color: var(--light-theme);
 }
 
+[data-theme=dark] {
+ --text-color:var(--dark-text);
+ --bg-color:var(--dark-bg);
+}
 /* Switched mode */
 .colorPreferance:checked ~ #page {
   --text-color: var(--dark-text);
