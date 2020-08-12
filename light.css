@@ -1,4 +1,22 @@
-html {
-	background-color: #ffffff;
-	color: #000000;
+:root {
+  /* Light mode */
+  --light-text: #222430;
+  --light-bg: #f7f7f7;
+  --light-theme: #d34a97;
+
+  /* Dark mode */
+  --dark-text: #f7f7f7;
+  --dark-bg: #222430;
+  --dark-theme: #bd93f9;
+  /* Default mode */
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+  --theme-color: var(--light-theme);
+}
+
+/* Switched mode */
+.theme-switch:checked ~ .stackedit {
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+  --theme-color: var(--light-theme);
 }
