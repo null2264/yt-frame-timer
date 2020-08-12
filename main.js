@@ -77,7 +77,7 @@ const parseForTime = (event) => {
         document.getElementById(event.target.id).value = `${finalFrame}`;
     }
 }
-let trans = () => {
+/*let trans = () => {
     //Add class
     document.documentElement.classList.add("transition");
     //Wait for the animation to finish then remove the class
@@ -151,4 +151,4 @@ function handleColorChange(event) {
 }
 colorPreferanceToggle.addEventListener("click", colorChange, true);
 var mql = matchMedia("(prefers-color-scheme: dark)");
-mql.onchange = handleColorChange;
+mql.onchange = handleColorChange;*/
