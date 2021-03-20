@@ -47,7 +47,6 @@ function copyModMessage() {
     textArea.focus();
     textArea.select();
     document.execCommand('copy');
-    alert(`The mod message has been copied to clipboard! Please paste it into the comment of the run you are verifying.`);
 }
 const validateFPS = (event) => {
     // If framerate is invalid, show an error message and disable start and end frame fields
