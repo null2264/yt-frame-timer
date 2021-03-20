@@ -65,7 +65,13 @@ const validateFPS = (event) => {
 }
 const parseForTime = (event) => {
     // Get current frame from input field (either start time or end time)
-    let frameFromInputText = (JSON.parse(event.target.value)).lct;
+    try {
+		frameFromInputText = (JSON.parse(event.target.value)).lct;
+	} catch {
+		document.getElementById(event.target.id).value = "";
+		return;
+	}
+    
     if (typeof frameFromInputText !== 'undefined') {
         // Get the framerate
         let frameRate = parseInt(document.getElementById('framerate').value);
@@ -75,6 +81,10 @@ const parseForTime = (event) => {
         // Update the DOM
         document.getElementById(event.target.id).value = `${finalFrame}`;
     }
+    
+   	if (document.getElementById("startobj").value
+		&& document.getElementById("endobj").value)
+		compute();
 }
 /*let trans = () => {
     //Add class
