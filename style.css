@@ -6,8 +6,9 @@
 
   /* Dark mode */
   --dark-text: #f7f7f7;
-  --dark-bg: #222430;
+  --dark-bg: #2A3039;
   --dark-theme: #bd93f9;
+  
   /* Default mode */
   --text-color: var(--light-text);
   --bg-color: var(--light-bg);
